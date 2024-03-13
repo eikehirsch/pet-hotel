@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <StyledFooter>
       <FooterContainer>
-        <Icon src="images/logo-navbar.svg" alt="" />
+        <Icon src="/images/logo-navbar.svg" alt="" />
         <FooterRow paddingPop="14px" fontWeight="600">
           <span>Início</span>
           <span>Hospedagens</span>

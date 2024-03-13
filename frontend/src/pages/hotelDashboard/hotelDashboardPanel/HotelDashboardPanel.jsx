@@ -33,9 +33,9 @@ import {
   AddOccupantsButton,
 } from "./styles.ts";
 
-import DateCalendarServerRequest from "./dateCalendar/DateCalendar.jsx";
 import BarCharts from "./barCharts/BarCharts.jsx";
 import RadialCharts from "./radialCharts/RadialCharts.jsx";
+import DateCalendar from "./dateCalendar/DateCalendar.jsx";
 
 import guests from "../../../mocks/guests";
 import occupants from "../../../mocks/occupants";
@@ -87,7 +87,7 @@ const HotelDashboardPanel = () => {
           </GuestCardsContainer>
         </GuestsBox>
         <DateCalendarBox>
-          <DateCalendarServerRequest />
+          <DateCalendar />
         </DateCalendarBox>
       </FirstRow>
       <SecondRow>

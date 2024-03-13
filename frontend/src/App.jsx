@@ -23,6 +23,11 @@ import HotelDashboardHistoric from "./pages/hotelDashboard/hotelDashboardHistori
 import HotelDashboardAnalysis from "./pages/hotelDashboard/hotelDashboardAnalysis/HotelDashboardAnalysis.jsx";
 import HotelDashboardProducts from "./pages/hotelDashboard/hotelDashboardProducts/HotelDashboardProducts.jsx";
 import HotelDashboardProfile from "./pages/hotelDashboard/hotelDashboardProfile/HotelDashboardProfile.jsx";
+import UserDashboard from "./pages/userDashboard/UserDashboard.jsx";
+import UserDashboardReservations from "./pages/userDashboard/userDashboardReservations/UserDashboardReservations.jsx";
+import UserDashboardFavorites from "./pages/userDashboard/userDashboardFavorites/UserDashboardFavorites.jsx";
+import UserDashboardOrders from "./pages/userDashboard/userDashboardOrders/UserDashboardOrders.jsx";
+import UserDashboardProfile from "./pages/userDashboard/userDashboardProfile/UserDashboardProfile.jsx";
 
 const App = () => {
   return (
@@ -69,6 +74,24 @@ const App = () => {
           <Route
             path="/hotel-dashboard/perfil"
             element={<HotelDashboardProfile />}
+          />
+        </Route>
+        <Route path="/user-dashboard" element={<UserDashboard />}>
+          <Route
+            path="/user-dashboard/reservas"
+            element={<UserDashboardReservations />}
+          />
+          <Route
+            path="/user-dashboard/favoritos"
+            element={<UserDashboardFavorites />}
+          />
+          <Route
+            path="/user-dashboard/pedidos"
+            element={<UserDashboardOrders />}
+          />
+          <Route
+            path="/user-dashboard/perfil"
+            element={<UserDashboardProfile />}
           />
         </Route>
       </Routes>

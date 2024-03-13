@@ -8,6 +8,9 @@ const BarCharts = () => {
       colors: ["#0a846b"],
       chart: {
         id: "apexchart-example",
+        toolbar: {
+          show: false,
+        },
       },
       xaxis: {
         categories: [

@@ -1,11 +1,7 @@
 import styled from "styled-components";
 
 export const StyledFooter = styled.div`
-  background: linear-gradient(
-    180deg,
-    rgba(10, 132, 107, 0) 10%,
-    #0a846b 100%
-  );
+  background: linear-gradient(180deg, rgba(10, 132, 107, 0) 10%, #0a846b 100%);
 `;
 
 export const FooterContainer = styled.div`

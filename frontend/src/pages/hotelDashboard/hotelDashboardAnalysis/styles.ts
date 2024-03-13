@@ -3,10 +3,35 @@ import styled from "styled-components";
 export const StyledHotelDashboardAnalysis = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: white;
   border-radius: 4px;
-  width: 70%;
-  padding: 3rem 4rem;
+  width: 75%;
+`;
+
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding: 2rem 2rem;
+  background-color: white;
+`;
+
+export const ChartNav = styled.div`
+  display: flex;
+`;
+
+export const ChartNavOption = styled.span`
+  background-color: ${(props) =>
+    props.selectedChart === true ? "white" : "#0A846B"};
+  color: ${(props) => (props.selectedChart === true ? "#0A846B" : "white")};
+  display: flex;
+  min-width: 100px;
+  padding: 18px;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
 `;
 
 export const DataRow = styled.div`
