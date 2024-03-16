@@ -72,7 +72,7 @@ const Login = () => {
                   backgroundColor="#0A846B"
                   border="#0A846B"
                   color="#FFFFFF"
-                  fontSize="14px"
+                  fontSize="18px"
                   fontWeight="600"
                 >
                   Login

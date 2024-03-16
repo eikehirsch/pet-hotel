@@ -36,6 +36,9 @@ import {
   ProductsSection,
   SectionHeaderContainer,
   HeaderTitleContainer,
+  GoogleMapsSection,
+  GoogleMapTitle,
+  GoogleMapAddress,
   ProductsTitle,
   ProductsSubtitle,
   SectionSubtitleContainer,
@@ -46,6 +49,7 @@ import Navbar from "../../components/navbar/Navbar.jsx";
 import Button from "../../components/button/Button.jsx";
 import Review from "../../components/review/Review.jsx";
 import ProductCard from "../../components/productCard/ProductCard.jsx";
+import GoogleMaps from "../../components/googleMaps/GoogleMaps.jsx";
 
 import hotel from "../../mocks/hotel.js";
 import productCards from "../../mocks/productCards.js";
@@ -178,6 +182,15 @@ const Hotel = () => {
             </HotelRightContainer>
           </HotelBodyContainer>
         </HotelMainSection>
+
+        <GoogleMapsSection>
+          <GoogleMapTitle>Localização</GoogleMapTitle>
+          <GoogleMapAddress>
+            <Icon src="/images/map-pointer.svg" />
+            {hotel.address}
+          </GoogleMapAddress>
+          {/* <GoogleMaps /> */}
+        </GoogleMapsSection>
 
         <ProductsSection>
           <SectionHeaderContainer>

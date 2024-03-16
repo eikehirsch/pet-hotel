@@ -19,37 +19,41 @@ export const StyledRegister = styled.div`
 export const LogoMobile = styled.img`
   display: none;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1224px) {
     display: block;
-    width: 80px;
+    width: 100px;
+    padding-bottom: 16px;
   }
 `;
 
 export const RegisterImage = styled.img`
   width: 50%;
-  object-fit: cover;
+  height: 100%;
+  object-fit: contain;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1224px) {
     display: none;
   }
 `;
 
 export const RightSection = styled.div`
-  width: 50%;
-  padding-top: 8px;
+  width: 34%;
+  margin: 0 auto;
+  padding-top: 4rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1224px) {
     width: 100%;
+    padding: 20px 0px 10px 0px;
+    padding-bottom: 4rem;
   }
 `;
 
 export const RightContainer = styled.div`
-  width: 50%;
-  padding: 40px;
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -57,12 +61,12 @@ export const RightContainer = styled.div`
   margin: 0 auto;
   text-align: center;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1224px) {
     width: 70%;
     margin: 0 auto;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1224px) {
     width: 80%;
     margin: 0 auto;
   }
@@ -75,14 +79,14 @@ export const RightContainer = styled.div`
 export const Title = styled.h1`
   color: black;
   font-weight: 600;
-  font-size: 30px;
-  width: 70%;
+  font-size: 36px;
+  width: 100%;
 
   @media (max-width: 1290px) {
     width: 100%;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1224px) {
     font-size: 22px;
   }
 `;
@@ -90,8 +94,14 @@ export const Title = styled.h1`
 export const Subtitle = styled.p`
   width: 100%;
   text-align: center;
-  font-size: 14px;
+  font-size: 22px;
   font-weight: 500;
+
+  @media (max-width: 1224px) {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
 `;
 
 export const OptionContainer = styled.div`
@@ -112,8 +122,8 @@ export const Form = styled.form`
   gap: 30px;
   margin-top: 30px;
 
-  @media (max-width: 768px) {
-    gap: 20px;
+  @media (max-width: 1224px) {
+    gap: 12px;
   }
 `;
 
@@ -123,11 +133,19 @@ export const InputContainer = styled.div`
   align-items: flex-start;
   flex-direction: column;
   gap: 4px;
+
+  @media (max-width: 1224px) {
+    gap: 0px;
+  }
 `;
 
 export const Label = styled.label`
-  font-size: 12px;
+  font-size: 20px;
   color: #757575;
+
+  @media (max-width: 1224px) {
+    font-size: 16px;
+  }
 `;
 
 export const Input = styled.input`
@@ -159,9 +177,11 @@ export const SubmitCheckContainer = styled.div`
 `;
 
 export const ButtonBox = styled.div`
-  @media (max-width: 768px) {
+  @media (max-width: 1224px) {
     width: 130px;
     margin: 0 auto;
+    margin-top: 1rem;
+    margin-top: 3rem;
   }
 `;
 
@@ -172,20 +192,20 @@ export const InputCheck = styled.input`
 `;
 
 export const InputCheckSpan = styled.span`
-  font-size: 10px;
-  color: #aeacac;
+  font-size: 14px;
+  color: darkgrey;
 `;
 
 export const AccessLoginContainer = styled.div`
-  margin-top: 5rem;
   display: flex;
+  margin-top: 1rem;
   width: 100%;
   justify-content: center;
-  font-size: 12px;
+  font-size: 16px;
   gap: 6px;
 
-  @media (max-width: 768px) {
-    margin-top: 2rem;
+  @media (max-width: 640px) {
+    font-size: 14px;
   }
 `;
 

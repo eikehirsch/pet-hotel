@@ -3,6 +3,7 @@ const hotel = {
   avatar: "./images/hotel-logo.png",
   averageScore: "5.0",
   ratingsNumber: 196,
+  address: "Rua Sabino Anisio da Silveira, 1145 - Campeche, Florianópolis - SC, 88065-033",
   userReviews: [
     {
       avatar: "./images/kristin-avatar.png",

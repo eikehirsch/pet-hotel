@@ -37,6 +37,7 @@ const Register = () => {
             <Button
               padding="12px 34px"
               color="#79c4b5"
+              fontSize="18px"
               fontWeight="600"
               borderRadius="8px"
               border="2px solid #79c4b5"
@@ -47,6 +48,7 @@ const Register = () => {
             <Button
               padding="12px 34px"
               color="#79c4b5"
+              fontSize="18px"
               fontWeight="600"
               borderRadius="8px"
               border="2px solid #79c4b5"
@@ -85,7 +87,7 @@ const Register = () => {
                   backgroundColor="#0A846B"
                   border="#0A846B"
                   color="#FFFFFF"
-                  fontSize="14px"
+                  fontSize="18px"
                   fontWeight="600"
                 >
                   Cadastrar

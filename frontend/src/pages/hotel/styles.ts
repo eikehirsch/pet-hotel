@@ -237,6 +237,24 @@ export const TotalDetail = styled.span`
   font-size: 16px;
 `;
 
+export const GoogleMapsSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 40px;
+`;
+
+export const GoogleMapTitle = styled.h1`
+  margin: 0;
+`;
+
+export const GoogleMapAddress = styled.span`
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  align-items: center;
+`;
+
 export const ProductsSection = styled.div`
   margin-top: 4rem;
   width: 100%;
