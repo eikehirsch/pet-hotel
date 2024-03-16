@@ -3,10 +3,10 @@ import styled from "styled-components";
 export const StyledNavbar = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 30px 30px 6px 30px;
+  padding: 10px 30px 6px 30px;
   width: 80%;
   margin: 0 auto;
-  font-size: 14px;
+  font-size: 18px;
   border-bottom: ${(props) =>
     props.borderBottom ? props.borderBottom : "1px solid #ffffff"};
   z-index: 10;
@@ -34,6 +34,13 @@ export const LeftList = styled.div`
 
 export const Icon = styled.img`
   cursor: pointer;
+  width: 150px;
+  height: 150px;
+
+  @media (max-width: 1224px) {
+    width: 120px;
+    height: 120px;
+  }
 `;
 
 export const LeftListItem = styled.li`
@@ -63,4 +70,6 @@ export const RightContainer = styled.div`
 export const CartIcon = styled.img`
   cursor: pointer;
   margin-right: 16px;
+  width: 24px;
+  height: 24px;
 `;

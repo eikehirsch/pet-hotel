@@ -8,25 +8,16 @@ export const StyledProductCard = styled.div`
   background-color: white;
   border-radius: 12px;
   padding: 8px;
-  max-width: 250px;
   gap: 4px;
   box-shadow: 0px 4px 28px -2px #00000014;
   cursor: pointer;
-
-  @media (max-width: 769px) {
-    width: 44%;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 0px;
-  }
+  flex: 1;
 `;
 
 export const CardImage = styled.img`
-  width: 264px;
-  height: 264px;
-  margin-bottom: 10px;
   width: 100%;
-  object-fit: contain;
+  height: 100%;
+  margin-bottom: 10px;
 
   @media (max-width: 769px) {
     height: 200px;
@@ -44,8 +35,6 @@ export const Title = styled.h4`
   font-size: 16px;
 
   @media (max-width: 769px) {
-    text-align: center;
-    width: 80%;
   }
 
   @media (max-width: 560px) {
@@ -65,7 +54,6 @@ export const CardContentContainer = styled.div`
   @media (max-width: 769px) {
     width: 100%;
     padding: 0;
-    align-items: center;
   }
 `;
 

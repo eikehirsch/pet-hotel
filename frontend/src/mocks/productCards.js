@@ -51,13 +51,13 @@ const productCards = [
     type: "Brinquedo",
     price: "35,00",
   },
-  {
-    img: "/images/product2.png",
-    name: "Reflex Plus Adult Cat Food Salmon",
-    type: "Ração",
-    size: "1.5kg",
-    price: "30,00",
-  },
+  // {
+  //   img: "/images/product2.png",
+  //   name: "Reflex Plus Adult Cat Food Salmon",
+  //   type: "Ração",
+  //   size: "1.5kg",
+  //   price: "30,00",
+  // },
 ];
 
 export default productCards;

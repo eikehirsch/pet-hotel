@@ -57,6 +57,8 @@ const Home = () => {
               border="2px solid #0a846b"
               borderRadius="50px"
               fontWeight="500"
+              padding="8px 18px"
+              fontSize="16px"
             >
               Ver mais {">"}
             </Button>
@@ -102,6 +104,8 @@ const Home = () => {
               border="2px solid #0a846b"
               borderRadius="50px"
               fontWeight="500"
+              padding="10px 22px"
+              fontSize="18px"
             >
               Ver mais {">"}
             </Button>

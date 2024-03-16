@@ -33,12 +33,24 @@ const Navbar = ({ borderBottom }) => {
           <CartIcon src="images/cart.svg" alt="" />
         </Link>
         <Link to="/login" style={{ textDecoration: "none" }}>
-          <Button color="white" borderRadius={"50px"} backgroundColor="#0a846b">
+          <Button
+            padding="10px 22px"
+            fontSize="18px"
+            color="white"
+            borderRadius={"50px"}
+            backgroundColor="#0a846b"
+          >
             Login
           </Button>
         </Link>
         <Link to="/cadastro" style={{ textDecoration: "none" }}>
-          <Button color="white" backgroundColor="#f26938" borderRadius={"50px"}>
+          <Button
+            padding="10px 22px"
+            fontSize="18px"
+            color="white"
+            backgroundColor="#f26938"
+            borderRadius={"50px"}
+          >
             Registrar
           </Button>
         </Link>

@@ -86,6 +86,11 @@ export const SectionContainer = styled.div`
 
 export const SectionTitle = styled.span`
   font-weight: 500;
+  font-size: 20px;
+
+  @media (max-width: 1224px) {
+    font-size: 16px;
+  }
 `;
 
 export const ButtonBox = styled.div`
@@ -98,20 +103,36 @@ export const SectionSubtitleContainer = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
+  margin-bottom: 14px;
 `;
 
 export const SectionSubtitle = styled.h2`
   margin: 0;
+  font-size: 30px;
   color: #0a846b;
+
+  @media (max-width: 1224px) {
+    font-size: 26px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 20px;
+  }
 `;
 
 export const CardsContainer = styled.div`
-  margin-top: 30px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
-  row-gap: 30px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 1fr); /* Ajuste conforme necessário */
+  gap: 10px; /* Espaçamento entre os itens */
+
+  @media (max-width: 1500px) {
+    grid-template-columns: repeat(3, 1fr); /* Ajuste conforme necessário */
+  }
+
+  @media (max-width: 870px) {
+    grid-template-columns: repeat(2, 1fr); /* Ajuste conforme necessário */
+  }
 `;
 
 export const FirstBanner = styled.div`
@@ -133,15 +154,29 @@ export const SecondBanner = styled.div`
   background-size: contain;
   position: relative;
   width: 100%;
-  height: 483px;
+  height: 450px;
+  margin: 40px 0px;
+
+  @media (max-width: 1224px) {
+    margin: 0px;
+    height: 350px;
+  }
 
   @media (max-width: 1024px) {
+    height: 480px;
     background-image: url("/images/second-banner-mobile.svg");
-    /* height: 400px; */
+  }
+
+  @media (max-width: 800px) {
+    height: 400px;
+  }
+
+  @media (max-width: 600px) {
+    height: 300px;
   }
 
   @media (max-width: 500px) {
-    height: 300px;
+    height: 250px;
   }
 `;
 
@@ -152,8 +187,47 @@ export const SecondBannerButton = styled.div`
   color: white;
   border: 1px solid white;
   border-radius: 24px;
-  font-size: 14px;
+  font-size: 18px;
   cursor: pointer;
   top: 60%;
   right: 34%;
+
+  @media (max-width: 1500px) {
+    right: 34%;
+  }
+
+  @media (max-width: 1190px) {
+    right: 31%;
+  }
+
+  @media (max-width: 1025px) {
+    right: 38%;
+    top: 56%;
+    padding: 12px 22px;
+    font-size: 14px;
+  }
+
+  @media (max-width: 900px) {
+    right: 38%;
+  }
+
+  @media (max-width: 800px) {
+    right: 36%;
+    font-size: 12px;
+  }
+
+  @media (max-width: 700px) {
+    right: 36%;
+    padding: 12px 18px;
+  }
+
+  @media (max-width: 600px) {
+    right: 34%;
+    padding: 10px 14px;
+  }
+
+  @media (max-width: 500px) {
+    right: 32%;
+    padding: 10px 14px;
+  }
 `;
