@@ -21,6 +21,7 @@ import {
 import Navbar from "../../components/navbar/Navbar.jsx";
 import CartTable from "../../components/cartTable/CartTable.jsx";
 import Button from "../../components/button/Button.jsx";
+import Footer from "../../components/footer/Footer.jsx";
 
 const Cart = () => {
   return (
@@ -58,13 +59,14 @@ const Cart = () => {
               backgroundColor="#0a846b"
               borderRadius="8px"
               fontWeight="500"
-              width="80%"
+              width="60%"
             >
               Checkout
             </Button>
           </RightContainer>
         </CartContainer>
       </CartSection>
+      <Footer />
     </StyledCart>
   );
 };

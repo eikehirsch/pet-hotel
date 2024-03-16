@@ -1,9 +1,25 @@
 import styled from "styled-components";
 
+export const StyledCartTable = styled.div`
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+`;
+
 export const ProductImage = styled.img`
   width: 80px;
   height: 80px;
   border-radius: 10px;
+
+  @media (max-width: 1024px) {
+    width: 60px;
+    height: 60px;
+  }
+
+  @media (max-width: 600px) {
+    width: 50px;
+    height: 50px;
+  }
 `;
 
 export const CounterContainer = styled.div`
@@ -14,6 +30,18 @@ export const CounterContainer = styled.div`
   background-color: white;
   border-radius: 20px;
   border: 1px solid #adacac;
+
+  @media (max-width: 1024px) {
+    padding: 3px 1px;
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 600px) {
+    padding: 3px 4px;
+    width: 80%;
+    margin: 0 auto;
+  }
 `;
 
 export const CounterDecrease = styled.span`
@@ -26,6 +54,16 @@ export const CounterDecrease = styled.span`
   align-items: center;
   justify-content: center;
   cursor: pointer;
+
+  @media (max-width: 1024px) {
+    width: 26px;
+    height: 26px;
+  }
+
+  @media (max-width: 600px) {
+    max-width: 24px;
+    max-height: 24px;
+  }
 `;
 
 export const CounterIncrease = styled.span`
@@ -38,6 +76,16 @@ export const CounterIncrease = styled.span`
   align-items: center;
   justify-content: center;
   cursor: pointer;
+
+  @media (max-width: 1024px) {
+    width: 26px;
+    height: 26px;
+  }
+
+  @media (max-width: 600px) {
+    max-width: 24px;
+    max-height: 24px;
+  }
 `;
 
 export const CounterInput = styled.input`
@@ -46,6 +94,10 @@ export const CounterInput = styled.input`
   outline: none;
   color: black;
   text-align: center;
+
+  @media (max-width: 600px) {
+    width: 20px;
+  }
 `;
 
 export const DeleteIcon = styled.span`
@@ -75,4 +127,12 @@ export const LastRowButton = styled.button`
   border-radius: 8px;
   border: none;
   cursor: pointer;
+
+  @media (max-width: 1024px) {
+    padding: 10px 20px;
+  }
+
+  @media (max-width: 600px) {
+    padding: 8px 14px;
+  }
 `;

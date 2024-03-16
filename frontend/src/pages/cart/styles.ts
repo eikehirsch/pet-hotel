@@ -9,30 +9,48 @@ export const StyledCart = styled.div`
     #c7ded9 3.79%,
     rgba(199, 222, 217, 0) 87.34%
   );
-  margin: auto;
-  padding-bottom: 10rem;
 `;
 
 export const CartSection = styled.div`
-  width: 80%;
-  margin: auto;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 1024px) {
+    width: 94%;
+    margin: 0 auto;
+  }
 `;
 
 export const CartContainer = styled.div`
   display: flex;
   gap: 20px;
+  width: 100%;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
 `;
 
 export const CartTitle = styled.h1`
   font-size: 22px;
   margin: 3rem 0;
+
+  @media (max-width: 1024px) {
+    margin: 1rem;
+  }
 `;
 
 export const LeftContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 12px;
-  width: 70%;
+  width: 100%;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 
 export const CoupumRow = styled.div`
@@ -43,6 +61,10 @@ export const CoupumRow = styled.div`
   border: 1px solid #ebeaea;
   border-radius: 10px;
   gap: 16px;
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+  }
 `;
 
 export const CoupumTitle = styled.h3`
@@ -54,6 +76,7 @@ export const CoupumTitle = styled.h3`
 export const CoupumInputContainer = styled.div`
   display: flex;
   align-items: center;
+  width: 100%;
 `;
 
 export const CoupumInput = styled.input`
@@ -64,6 +87,7 @@ export const CoupumInput = styled.input`
   border-right: none;
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
+  flex: 1;
 `;
 
 export const CoupumButton = styled.button`
@@ -79,6 +103,11 @@ export const CoupumButton = styled.button`
   color: white;
   font-weight: 600;
   cursor: pointer;
+
+  @media (max-width: 700px) {
+    width: 250px;
+    padding: 14px 10px;
+  }
 `;
 
 export const RightContainer = styled.div`
@@ -93,6 +122,15 @@ export const RightContainer = styled.div`
   background-color: white;
   height: 240px;
   width: 24%;
+
+  @media (max-width: 1024px) {
+    width: auto;
+  }
+
+  @media (max-width: 600px) {
+    gap: 4px;
+    padding: 14px 20px 0px 20px;
+  }
 `;
 
 export const RightTitle = styled.h1`
@@ -100,6 +138,10 @@ export const RightTitle = styled.h1`
   font-size: 22px;
   align-self: flex-start;
   font-weight: 500;
+
+  @media (max-width: 600px) {
+    font-size: 18px;
+  }
 `;
 
 export const RightContainerRow = styled.div`
