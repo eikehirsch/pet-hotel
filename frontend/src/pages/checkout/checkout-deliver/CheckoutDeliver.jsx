@@ -1,6 +1,7 @@
 import {
   StyledCheckoutDeliver,
   ImageContainer,
+  Image,
   CheckoutDeliverSection,
   LeftContainer,
   LeftRow,
@@ -40,7 +41,7 @@ const CheckoutDeliver = () => {
     <StyledCheckoutDeliver>
       <Navbar />
       <ImageContainer>
-        <img src="./images/delivery-checkout-step.svg" />
+        <Image src="./images/delivery-checkout-step.svg" />
       </ImageContainer>
       <CheckoutDeliverSection>
         <LeftContainer>
@@ -49,17 +50,17 @@ const CheckoutDeliver = () => {
               <Label>Nome</Label>
               <Input type="text" placeholder="Seu nome" />
             </InputContainer>
-            <InputContainer width="60%">
+            <InputContainer flex="1">
               <Label>Sobrenome</Label>
               <Input type="text" placeholder="Seu sobrenome" />
             </InputContainer>
           </LeftRow>
           <LeftRow>
-            <InputContainer width="70%">
+            <InputContainer width="60%">
               <Label>Endereço</Label>
               <Input type="text" placeholder="Endereço" />
             </InputContainer>
-            <InputContainer width="20%">
+            <InputContainer flex="1">
               <Label>Número</Label>
               <Input type="text" placeholder="Número" />
             </InputContainer>
@@ -69,17 +70,17 @@ const CheckoutDeliver = () => {
               <Label>CEP</Label>
               <Input type="text" placeholder="00000-00" />
             </InputContainer>
-            <InputContainer width="50%">
+            <InputContainer flex="1">
               <Label>Estado</Label>
               <Input type="text" placeholder="Estado" />
             </InputContainer>
           </LeftRow>
           <LeftRow>
-            <InputContainer width="60%">
+            <InputContainer width="50%">
               <Label>Endereço</Label>
               <Input type="text" placeholder="Endereço" />
             </InputContainer>
-            <InputContainer width="30%">
+            <InputContainer flex="1">
               <Label>Número</Label>
               <Input type="text" placeholder="Número" />
             </InputContainer>
@@ -90,7 +91,7 @@ const CheckoutDeliver = () => {
               width="100%"
               alignItems="center"
             >
-              <Input type="checkbox" width="2%" />
+              <Input type="checkbox" width="10px" />
               <AnotherAddress>Enviar para um endereço diferente</AnotherAddress>
             </InputContainer>
           </LeftRow>
@@ -147,7 +148,7 @@ const CheckoutDeliver = () => {
             backgroundColor="#0a846b"
             borderRadius="4px"
             fontWeight="500"
-            width="80%"
+            width="50%"
           >
             Ir ao pagamento
           </Button>

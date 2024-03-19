@@ -92,16 +92,16 @@ export const CoupumInput = styled.input`
 
 export const CoupumButton = styled.button`
   height: 100%;
-  padding: 14px 22px;
-  width: 150px;
-  font-size: 14px;
+  padding: 12px 22px;
+  width: 180px;
+  font-size: 16px;
   border: none;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
   background-color: #f26938;
   border: 1px solid #f26938;
   color: white;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
 
   @media (max-width: 700px) {

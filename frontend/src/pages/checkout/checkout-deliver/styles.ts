@@ -11,6 +11,10 @@ export const StyledCheckoutDeliver = styled.div`
   );
   margin: auto;
   padding-bottom: 10rem;
+
+  @media (max-width: 760px) {
+    padding-bottom: 4rem;
+  }
 `;
 
 export const ImageContainer = styled.div`
@@ -19,6 +23,17 @@ export const ImageContainer = styled.div`
   justify-content: center;
   margin: auto;
   margin-top: 2rem;
+
+  @media (max-width: 760px) {
+    width: 70%;
+    margin-top: 1rem;
+  }
+`;
+
+export const Image = styled.img`
+  @media (max-width: 760px) {
+    width: 100%;
+  }
 `;
 
 export const CheckoutDeliverSection = styled.div`
@@ -26,7 +41,14 @@ export const CheckoutDeliverSection = styled.div`
   margin: auto;
   padding-top: 4rem;
   display: flex;
-  gap: 2rem;
+  justify-content: space-between;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    width: 90%;
+    padding-top: 2rem;
+    gap: 10px;
+  }
 `;
 
 export const LeftContainer = styled.div`
@@ -34,11 +56,16 @@ export const LeftContainer = styled.div`
   flex-direction: column;
   gap: 12px;
   width: 60%;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 
 export const LeftRow = styled.div`
   display: flex;
-  gap: 40px;
+  width: 100%;
+  gap: 30px;
 `;
 
 export const InputContainer = styled.div`
@@ -49,6 +76,8 @@ export const InputContainer = styled.div`
     props.alignItems ? props.alignItems : "flex-start"};
   display: flex;
   gap: 4px;
+  background-color: ${(props) => props.background};
+  flex: ${(props) => props.flex};
 `;
 
 export const Label = styled.label`
@@ -65,6 +94,9 @@ export const Input = styled.input`
   background-color: #ffffff;
   padding: 12px;
   border-radius: 4px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 
   &::placeholder {
     color: #bebdbd;
@@ -85,6 +117,13 @@ export const DeliverRow = styled.div`
   border: 1px solid #e3e3e3;
   border-radius: 6px;
   gap: 26px;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    margin-top: 1rem;
+    gap: 10px;
+    padding: 10px;
+  }
 `;
 
 export const DeliverTitle = styled.h3`
@@ -97,16 +136,17 @@ export const DeliverTitle = styled.h3`
 export const DeliverInputContainer = styled.div`
   display: flex;
   align-items: center;
+  flex: 1;
 `;
 
 export const DeliverInput = styled.input`
   padding: 14px 20px;
-  width: 300px;
   outline: none;
   border: 1px solid #e8e8e8;
   border-right: none;
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
+  flex: 2;
 
   &::placeholder {
     color: #b8b7b7;
@@ -116,7 +156,7 @@ export const DeliverInput = styled.input`
 export const DeliverButton = styled.button`
   height: 100%;
   padding: 12px 22px;
-  width: 180px;
+  flex: 1;
   font-size: 16px;
   border: none;
   border-top-right-radius: 6px;
@@ -126,6 +166,15 @@ export const DeliverButton = styled.button`
   color: white;
   font-weight: 500;
   cursor: pointer;
+
+  @media (max-width: 1024px) {
+    width: 250px;
+    padding: 14px 10px;
+  }
+
+  @media (max-width: 760px) {
+    width: auto;
+  }
 `;
 
 export const ForgotCEP = styled.span`
@@ -138,6 +187,10 @@ export const AditionalInfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 2rem;
+
+  @media (max-width: 760px) {
+    margin-top: 1rem;
+  }
 `;
 
 export const AditionalInfoTitle = styled.h1`
@@ -145,10 +198,19 @@ export const AditionalInfoTitle = styled.h1`
   margin: 0;
   margin-bottom: 10px;
   font-weight: 500;
+
+  @media (max-width: 760px) {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
 `;
 
 export const AditionalInfoSubTitle = styled.span`
   margin-bottom: 6px;
+
+  @media (max-width: 760px) {
+    font-size: 14px;
+  }
 `;
 
 export const AditionalInfoInput = styled.textarea`
@@ -165,6 +227,14 @@ export const AditionalInfoInput = styled.textarea`
     font-size: 16px;
     font-family: "Poppins";
   }
+
+  @media (max-width: 760px) {
+    font-size: 14px;
+
+    &::placeholder {
+      font-size: 14px;
+    }
+  }
 `;
 
 export const RightContainer = styled.div`
@@ -178,8 +248,15 @@ export const RightContainer = styled.div`
   border: 1px solid #d4d4d4;
   border-radius: 10px;
   background-color: white;
-  width: 30%;
+  width: 32%;
   height: min-content;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
 `;
 
 export const RightTitle = styled.h1`
