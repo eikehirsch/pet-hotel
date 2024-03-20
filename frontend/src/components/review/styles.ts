@@ -5,6 +5,11 @@ export const StyledReviews = styled.div`
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #e6e6e6;
+
+  @media (max-width: 1250px) {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
 `;
 
 export const ReviewContainer = styled.div`
@@ -50,4 +55,8 @@ export const ReviewSecondRow = styled.span`
   font-weight: 400;
   text-align: justify;
   text-justify: inter-word;
+
+  @media (max-width: 1250px) {
+    font-size: 12px;
+  }
 `;

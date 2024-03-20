@@ -5,17 +5,18 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import 'swiper/css/free-mode';
-import 'swiper/css/scrollbar';
+import "swiper/css/free-mode";
+import "swiper/css/scrollbar";
 import "./styles.css";
 
 // import required modules
-import { FreeMode, Scrollbar, Mousewheel } from 'swiper/modules';
+import { FreeMode, Scrollbar, Mousewheel } from "swiper/modules";
 
 import relatedProducts from "../../mocks/relatedProductCards.js";
 
 const StyledRelatedProductsContainer = styled.div`
   display: flex;
+  width: 100%;
   flex-direction: column;
 `;
 
@@ -28,7 +29,7 @@ const StyledRelatedProductCard = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: auto;
+  width: 220px;
   height: auto;
   cursor: pointer;
 `;
@@ -85,7 +86,21 @@ const RelatedProducts = () => {
     <StyledRelatedProductsContainer>
       <Swiper
         slidesPerView="4"
-        className="mySwiper"
+        breakpoints={{
+          300: {
+            slidesPerView: 1,
+          },
+          580: {
+            slidesPerView: 2,
+          },
+          850: {
+            slidesPerView: 3,
+          },
+          1100: {
+            slidesPerView: 4,
+          },
+        }}
+        id="mySwiper3"
         freeMode={true}
         scrollbar={true}
         mousewheel={true}

@@ -7,19 +7,19 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import 'swiper/css/navigation';
+import "swiper/css/navigation";
 
 // import required modules
 import { Pagination, Navigation } from "swiper/modules";
 
-import "../VerticalSwiper/styles.css";
+import "./styles.css";
 
 const StyledSwiperContainer = styled.div`
   height: 500px;
   background-color: transparent;
 `;
 
-const VerticalSwiper = ({ productImages }) => {
+const ProductVerticalSwiper = ({ productImages }) => {
   return (
     <StyledSwiperContainer>
       <Swiper
@@ -27,7 +27,7 @@ const VerticalSwiper = ({ productImages }) => {
         direction={"vertical"}
         navigation={true}
         modules={[Pagination, Navigation]}
-        className="mySwiper"
+        id="mySwiper1"
       >
         {productImages.map((image) => (
           <SwiperSlide key={image}>
@@ -39,4 +39,4 @@ const VerticalSwiper = ({ productImages }) => {
   );
 };
 
-export default VerticalSwiper;
+export default ProductVerticalSwiper;

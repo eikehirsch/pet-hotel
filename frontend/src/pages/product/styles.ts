@@ -17,6 +17,10 @@ export const ProductSection = styled.div`
   flex-direction: column;
   width: 80%;
   margin: 0 auto 80px auto;
+
+  @media (max-width: 580px) {
+    width: 88%;
+  }
 `;
 
 export const ProductContainer = styled.div`
@@ -24,6 +28,23 @@ export const ProductContainer = styled.div`
   display: flex;
   gap: 40px;
   margin-top: 50px;
+
+  @media (max-width: 1450px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  @media (max-width: 1250px) {
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  @media (max-width: 600px) {
+    gap: 0px;
+    margin-top: 10px;
+  }
 `;
 
 export const ProductLeftSubcontainer = styled.div`
@@ -31,6 +52,18 @@ export const ProductLeftSubcontainer = styled.div`
   gap: 16px;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 1450px) {
+    flex-direction: column-reverse;
+  }
+
+  @media (max-width: 1250px) {
+    width: 70%;
+  }
+
+  @media (max-width: 600px) {
+    width: 90%;
+  }
 `;
 
 export const SliderImage = styled.div`
@@ -40,9 +73,25 @@ export const SliderImage = styled.div`
   justify-content: center;
   width: 18%;
   gap: 14px;
+
+  @media (max-width: 1450px) {
+    width: 100%;
+  }
 `;
 
-export const MainImage = styled.img``;
+export const MainImage = styled.img`
+  width: 100%;
+  object-fit: contain;
+
+  @media (max-width: 1450px) {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+`;
 
 export const ProductRightSubcontainer = styled.div`
   width: 50%;
@@ -50,11 +99,21 @@ export const ProductRightSubcontainer = styled.div`
   flex-direction: column;
   gap: 50px;
   padding: 10px 0;
+
+  @media (max-width: 1450px) {
+    width: 100%;
+    margin: 0 auto;
+    gap: 20px;
+  }
 `;
 
 export const RightTitle = styled.h1`
   font-size: 28px;
   margin: 0;
+
+  @media (max-width: 1450px) {
+    font-size: 26px;
+  }
 `;
 
 export const ReviewsRow = styled.div`
@@ -109,6 +168,10 @@ export const Description = styled.p`
   width: 70%;
   font-size: 12px;
   color: #808080;
+
+  @media (max-width: 1250px) {
+    width: 100%;
+  }
 `;
 
 export const ButtonsRow = styled.div`
@@ -178,7 +241,6 @@ export const MediaRow = styled.div`
   align-items: center;
   gap: 10px;
   font-size: 12px;
-  margin-top: 40px;
 `;
 
 export const MediaImage = styled.img`
@@ -192,6 +254,22 @@ export const MediaSvg = styled.img`
 
 export const ReviewsContainer = styled.div`
   margin-top: 70px;
+
+  @media (max-width: 1250px) {
+    margin-top: 20px;
+  }
+`;
+
+export const ShowMoreRow = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 30px;
+  padding-bottom: 30px;
+
+  @media (max-width: 1250px) {
+    margin-top: 20px;
+    padding-bottom: 20px;
+  }
 `;
 
 export const RelatedProductsContainer = styled.div``;

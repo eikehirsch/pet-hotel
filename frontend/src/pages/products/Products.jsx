@@ -17,6 +17,8 @@ import productCards from "../../mocks/productCards.js";
 import ProductCard from "../../components/productCard/ProductCard.jsx";
 import Navbar from "../../components/navbar/Navbar.jsx";
 
+
+
 const Lodgings = () => {
   return (
     <StyledProducts>

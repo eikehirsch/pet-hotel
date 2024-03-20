@@ -1,5 +1,19 @@
-.swiper-wrapper {
+#mySwiper3 {
+  width: 100%;
+}
+
+#mySwiper3 .swiper-slide {
+  width: 200px;
+
+  @media (max-width: 580px) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+#mySwiper3 .swiper-wrapper {
   height: 330px;
   display: flex;
   align-items: center;
+  gap: 20px;
 }

@@ -26,6 +26,7 @@ import {
   MediaImage,
   MediaSvg,
   ReviewsContainer,
+  ShowMoreRow,
   RelatedProductsContainer,
   RelatedProductsTitle,
 } from "./styles.ts";
@@ -33,13 +34,18 @@ import {
 import Navbar from "../../components/navbar/Navbar.jsx";
 import Review from "../../components/review/Review.jsx";
 import Button from "../../components/button/Button.jsx";
-import VerticalSwiper from "../../components/VerticalSwiper/VerticalSwiper.jsx";
+import ProductVerticalSwiper from "./productVerticalSwiper/ProductVerticalSwiper.jsx";
+import ProductHorizontalSwiper from "./productHorizontalSwiper/ProductHorizontalSwiper.jsx";
 import RelatedProducts from "../../components/RelatesProducts/RelatedProducts.jsx";
 import Footer from "../../components/footer/Footer.jsx";
 
 import product from "../../mocks/product.js";
 
+import CheckMediaQuery from "../../hooks/checkMediaQuery/CheckMediaQuery.jsx";
+
 const Product = () => {
+  const isWeb = CheckMediaQuery("(min-width: 1450px)");
+
   return (
     <StyledProduct>
       <Navbar />
@@ -47,7 +53,11 @@ const Product = () => {
         <ProductContainer>
           <ProductLeftSubcontainer>
             <SliderImage>
-              <VerticalSwiper productImages={product.images} />
+              {isWeb ? (
+                <ProductVerticalSwiper productImages={product.images} />
+              ) : (
+                <ProductHorizontalSwiper productImages={product.images} />
+              )}
             </SliderImage>
             <MainImage src={product.images[0]} />
           </ProductLeftSubcontainer>
@@ -109,14 +119,7 @@ const Product = () => {
           {product.userReviews.map((review) => (
             <Review key={review.userName} review={review} />
           ))}
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "flex-start",
-              marginTop: "30px",
-              paddingBottom: "30px",
-            }}
-          >
+          <ShowMoreRow>
             <Button
               color="#0a846b"
               backgroundColor="#e5efec"
@@ -126,7 +129,7 @@ const Product = () => {
             >
               Mostrar mais
             </Button>
-          </div>
+          </ShowMoreRow>
         </ReviewsContainer>
         <RelatedProductsContainer>
           <RelatedProductsTitle>Produtos relacionados</RelatedProductsTitle>

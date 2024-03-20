@@ -22,6 +22,10 @@ export const ConfirmedOrderSection = styled.div`
   padding-top: 6rem;
   display: flex;
   gap: 2rem;
+
+  @media (max-width: 1024px) {
+    padding-top: 2rem;
+  }
 `;
 
 export const Title = styled.span`

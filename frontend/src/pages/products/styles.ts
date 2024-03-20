@@ -104,9 +104,16 @@ export const InputRange = styled.input`
 
 export const CardsContainer = styled.div`
   /* margin-top: 20px; */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
-  row-gap: 30px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 1fr); /* Ajuste conforme necessário */
+  gap: 10px; /* Espaçamento entre os itens */
+
+  @media (max-width: 1500px) {
+    grid-template-columns: repeat(3, 1fr); /* Ajuste conforme necessário */
+  }
+
+  @media (max-width: 870px) {
+    grid-template-columns: repeat(2, 1fr); /* Ajuste conforme necessário */
+  }
 `;
