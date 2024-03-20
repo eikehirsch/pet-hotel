@@ -1,12 +1,14 @@
 import {
   StyledCheckoutPayment,
   ImageContainer,
+  Image,
   CheckoutDeliverSection,
   LeftContainer,
   LeftRow,
   InputContainer,
   InputSubcontainer,
   Icon,
+  CreditIcon,
   Input,
   Label,
   RightContainer,
@@ -31,7 +33,7 @@ const CheckoutPayment = () => {
     <StyledCheckoutPayment>
       <Navbar />
       <ImageContainer>
-        <img src="./images/payment-checkout-step.svg" />
+        <Image src="./images/payment-checkout-step.svg" />
       </ImageContainer>
       <CheckoutDeliverSection>
         <LeftContainer>
@@ -42,7 +44,7 @@ const CheckoutPayment = () => {
                 <Input type="text" placeholder="Cartão de Crédito / Débito" />
               </InputSubcontainer>
             </InputContainer>
-            <InputContainer width="10%">
+            <InputContainer flex="1">
               <InputSubcontainer>
                 <Icon width="24px" src="./images/logo-pix.svg" alt="" />
                 <Input paddingLeft="6px" type="text" placeholder="PIX" />
@@ -53,7 +55,7 @@ const CheckoutPayment = () => {
             </InputContainer>
           </LeftRow>
           <LeftRow>
-            <InputContainer width="96%">
+            <InputContainer flex="1">
               <Label>Nome no cartão</Label>
               <Input type="text" placeholder="Seu nome" />
             </InputContainer>
@@ -61,12 +63,12 @@ const CheckoutPayment = () => {
           <LeftRow>
             <InputContainer width="70%">
               <Label>Número</Label>
-              <InputSubcontainer paddingLeft="0px">
+              <InputSubcontainer paddingRight="16px">
                 <Input type="text" placeholder="1234 1234 1234 1234" />
-                <Icon width="110px" src="./images/banks.svg" alt="" />
+                <CreditIcon width="110px" src="./images/banks.svg" alt="" />
               </InputSubcontainer>
             </InputContainer>
-            <InputContainer width="20%">
+            <InputContainer flex="1">
               <Label>CVC</Label>
               <Input type="text" placeholder="123" />
             </InputContainer>
@@ -76,11 +78,11 @@ const CheckoutPayment = () => {
               <Label>Validade</Label>
               <Input type="text" placeholder="01/2000" />
             </InputContainer>
-            <InputContainer width="32%">
+            <InputContainer flex="1">
               <Label>CPF</Label>
               <Input type="text" placeholder="012.154.015-02" />
             </InputContainer>
-            <InputContainer width="32%">
+            <InputContainer flex="1">
               <Label>CEP</Label>
               <Input type="text" placeholder="00000-000" />
             </InputContainer>
@@ -119,7 +121,7 @@ const CheckoutPayment = () => {
             backgroundColor="#0a846b"
             borderRadius="4px"
             fontWeight="500"
-            width="80%"
+            width="60%"
           >
             Finalizar compra
           </Button>

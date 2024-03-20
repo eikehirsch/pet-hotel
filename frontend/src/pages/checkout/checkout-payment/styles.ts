@@ -11,6 +11,10 @@ export const StyledCheckoutPayment = styled.div`
   );
   margin: auto;
   padding-bottom: 10rem;
+
+  @media (max-width: 760px) {
+    padding-bottom: 4rem;
+  }
 `;
 
 export const ImageContainer = styled.div`
@@ -19,6 +23,17 @@ export const ImageContainer = styled.div`
   justify-content: center;
   margin: auto;
   margin-top: 2rem;
+
+  @media (max-width: 760px) {
+    width: 70%;
+    margin-top: 1rem;
+  }
+`;
+
+export const Image = styled.img`
+  @media (max-width: 760px) {
+    width: 100%;
+  }
 `;
 
 export const CheckoutDeliverSection = styled.div`
@@ -27,6 +42,13 @@ export const CheckoutDeliverSection = styled.div`
   padding-top: 4rem;
   display: flex;
   gap: 2rem;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    width: 90%;
+    padding-top: 2rem;
+    gap: 10px;
+  }
 `;
 
 export const LeftContainer = styled.div`
@@ -34,11 +56,16 @@ export const LeftContainer = styled.div`
   flex-direction: column;
   gap: 12px;
   width: 60%;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 
 export const LeftRow = styled.div`
   display: flex;
-  gap: 6%;
+  width: 100%;
+  gap: 10px;
   margin-bottom: ${(props) => props.marginBottom};
 `;
 
@@ -50,6 +77,10 @@ export const InputContainer = styled.div`
     props.alignItems ? props.alignItems : "flex-start"};
   display: flex;
   gap: 4px;
+  flex: ${(props) => props.flex};
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 `;
 
 export const Label = styled.label`
@@ -66,10 +97,21 @@ export const Input = styled.input`
   background-color: #ffffff;
   padding: 12px;
   border-radius: 4px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   padding-left: ${(props) => (props.paddingLeft ? props.paddingLeft : "12px")};
 
   &::placeholder {
     color: #bebdbd;
+  }
+
+  @media (max-width: 600px) {
+    padding: 12px 6px;
+
+    &::placeholder {
+      font-size: 12px;
+    }
   }
 `;
 
@@ -84,8 +126,15 @@ export const RightContainer = styled.div`
   border: 1px solid #d4d4d4;
   border-radius: 10px;
   background-color: white;
-  width: 30%;
+  width: 32%;
   height: min-content;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
 `;
 
 export const RightTitle = styled.h1`
@@ -149,12 +198,30 @@ export const InputSubcontainer = styled.div`
   display: flex;
   background-color: white;
   padding-left: ${(props) => (props.paddingLeft ? props.paddingLeft : "14px")};
-  padding-right: ${(props) =>
-    props.paddingRight ? props.paddingRight : "14px"};
+  padding-right: ${(props) => props.paddingRight};
   border-radius: 4px;
   width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  /* @media (max-width: 600px) {
+    padding-left: 0px;
+  } */
 `;
 
 export const Icon = styled.img`
   width: ${(props) => props.width};
+
+  @media (max-width: 600px) {
+    width: 16px;
+  }
+`;
+
+export const CreditIcon = styled.img`
+  width: ${(props) => props.width};
+
+  @media (max-width: 600px) {
+    width: 86px;
+  }
 `;
