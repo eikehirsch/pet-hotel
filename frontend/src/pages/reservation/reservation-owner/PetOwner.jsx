@@ -8,6 +8,8 @@ import {
   SectionTitleContainer,
   SectionTitle,
   SectionSubtitle,
+  ImageContainer,
+  Image,
   BodyContainer,
   LeftContainer,
   LeftTitleRow,
@@ -47,7 +49,9 @@ const PetOwner = () => {
                 </SectionSubtitle>
               </SectionTitleContainer>
             </SectionTitleAndAvatarContainer>
-            <img src="./images/dog-owner-step.svg" alt="" />
+            <ImageContainer>
+              <Image src="./images/dog-owner-step.svg" alt="" />
+            </ImageContainer>
           </MainSectionHeader>
 
           <BodyContainer>
@@ -61,7 +65,7 @@ const PetOwner = () => {
                   <Label>Nome</Label>
                   <Input type="text" placeholder="Seu nome" />
                 </InputContainer>
-                <InputContainer width="60%">
+                <InputContainer flex="1">
                   <Label>Sobrenome</Label>
                   <Input type="text" placeholder="Seu sobrenome" />
                 </InputContainer>
@@ -71,7 +75,7 @@ const PetOwner = () => {
                   <Label>CPF</Label>
                   <Input type="text" placeholder="000.000.000-00" />
                 </InputContainer>
-                <InputContainer width="60%">
+                <InputContainer flex="1">
                   <Label>E-mail</Label>
                   <Input type="text" placeholder="E-mail" />
                 </InputContainer>
@@ -81,7 +85,7 @@ const PetOwner = () => {
                   <Label>Endereço</Label>
                   <Input type="text" placeholder="Endereço" />
                 </InputContainer>
-                <InputContainer width="20%">
+                <InputContainer flex="1">
                   <Label>Número</Label>
                   <Input type="text" placeholder="Número" />
                 </InputContainer>
@@ -91,7 +95,7 @@ const PetOwner = () => {
                   <Label>CEP</Label>
                   <Input type="text" placeholder="00000-00" />
                 </InputContainer>
-                <InputContainer width="45%">
+                <InputContainer flex="1">
                   <Label>Estado</Label>
                   <Input type="text" placeholder="Estado" />
                 </InputContainer>
@@ -101,29 +105,29 @@ const PetOwner = () => {
                   <Label>Complemento</Label>
                   <Input type="text" placeholder="Complemento" />
                 </InputContainer>
-                <InputContainer width="30%">
+                <InputContainer flex="1">
                   <Label>Telefone</Label>
                   <Input type="text" placeholder="Telefone" />
                 </InputContainer>
               </LeftRow>
-              <ButtonRow>
-                <Button
-                  color="#ffffff"
-                  backgroundColor="#0a846b"
-                  border="2px solid #0a846b"
-                  borderRadius="6px"
-                  fontWeight="500"
-                  width="10%"
-                >
-                  Próximo
-                </Button>
-              </ButtonRow>
             </LeftContainer>
 
             <RightContainer>
               <DateRangePicker />
             </RightContainer>
           </BodyContainer>
+          <ButtonRow>
+            <Button
+              color="#ffffff"
+              backgroundColor="#0a846b"
+              border="2px solid #0a846b"
+              borderRadius="6px"
+              fontWeight="500"
+              width="10%"
+            >
+              Próximo
+            </Button>
+          </ButtonRow>
         </MainSection>
       </PetOwnerContainer>
     </StylePetOwner>
