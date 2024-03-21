@@ -8,6 +8,11 @@ import {
   Vacancy,
   HotelMainSection,
   HotelMainSectionHeader,
+  HotelSubcontainerHeader,
+  HotelSubcontainerHeaderBox,
+  HotelDescriptionTitle,
+  HotelDescriptionSubtitle,
+  HotelDescriptionDetail,
   SectionTitleContainer,
   ButtonsContainer,
   SectionTitle,
@@ -21,6 +26,7 @@ import {
   HotelRightContainer,
   ChecksRow,
   CheckinBox,
+  ButtonRow,
   CheckinTitle,
   CheckinDate,
   CheckoutBox,
@@ -50,6 +56,7 @@ import Button from "../../components/button/Button.jsx";
 import Review from "../../components/review/Review.jsx";
 import ProductCard from "../../components/productCard/ProductCard.jsx";
 import GoogleMaps from "../../components/googleMaps/GoogleMaps.jsx";
+import Footer from "../../components/footer/Footer.jsx";
 
 import hotel from "../../mocks/hotel.js";
 import productCards from "../../mocks/productCards.js";
@@ -60,14 +67,31 @@ const Hotel = () => {
       <Navbar />
       <HotelContainer>
         <HotelContainerHeader>
-          <Icon width="60px" height="60px" src={hotel.avatar} />
-          <TitleContainer>
-            <Title>{hotel.name}</Title>
-            <Vacancy>
-              <img src="./images/green-dot.png" alt="" /> {"Vagas disponíveis"}
-            </Vacancy>
-          </TitleContainer>
-          <Icon width="32px" height="32px" src="./images/gray-flag.png" />
+          <HotelSubcontainerHeader>
+            <Icon width="60px" height="60px" src={hotel.avatar} />
+            <TitleContainer>
+              <Title>{hotel.name}</Title>
+              <Vacancy>
+                <img src="./images/green-dot.png" alt="" />{" "}
+                {"Vagas disponíveis"}
+              </Vacancy>
+            </TitleContainer>
+            <Icon width="32px" height="32px" src="./images/gray-flag.png" />
+          </HotelSubcontainerHeader>
+
+          <HotelSubcontainerHeader gap="20px">
+            <HotelSubcontainerHeaderBox>
+              <HotelDescriptionTitle>Sobre nós</HotelDescriptionTitle>
+              <HotelDescriptionSubtitle>{hotel.name}</HotelDescriptionSubtitle>
+            </HotelSubcontainerHeaderBox>
+            <HotelDescriptionDetail>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Reiciendis, aliquam libero! Reiciendis fugiat modi inventore
+              molestias? Eveniet natus maxime ducimus eum nisi consequuntur,
+              perferendis quos repellendus voluptatum similique suscipit
+              eligendi!
+            </HotelDescriptionDetail>
+          </HotelSubcontainerHeader>
         </HotelContainerHeader>
 
         <HotelMainSection>
@@ -149,7 +173,7 @@ const Hotel = () => {
                 backgroundColor="#0a846b"
                 borderRadius="4px"
                 fontWeight="400"
-                width="80%"
+                width="50%"
               >
                 Reservar
               </Button>
@@ -200,16 +224,18 @@ const Hotel = () => {
                 <ProductsSubtitle>Produtos</ProductsSubtitle>
               </SectionSubtitleContainer>
             </HeaderTitleContainer>
-            <Button
-              color="#0a846b"
-              backgroundColor="transparent"
-              border="2px solid #0a846b"
-              borderRadius="50px"
-              fontWeight="500"
-              width="10%"
-            >
-              Ver mais {">"}
-            </Button>
+            <ButtonRow>
+              <Button
+                color="#0a846b"
+                backgroundColor="transparent"
+                border="2px solid #0a846b"
+                borderRadius="50px"
+                fontWeight="500"
+                width="100%"
+              >
+                Ver mais {">"}
+              </Button>
+            </ButtonRow>
           </SectionHeaderContainer>
 
           <CardsContainer>
@@ -221,6 +247,7 @@ const Hotel = () => {
           </CardsContainer>
         </ProductsSection>
       </HotelContainer>
+      <Footer />
     </StyleHotel>
   );
 };

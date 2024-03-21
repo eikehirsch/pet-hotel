@@ -10,19 +10,90 @@ export const StyleHotel = styled.div`
     rgba(199, 222, 217, 0) 87.34%
   );
   margin: auto;
-  padding-bottom: 10rem;
 `;
 
 export const HotelContainer = styled.div`
   width: 80%;
   margin: auto;
+  padding-bottom: 2rem;
+
+  @media (max-width: 1250px) {
+    width: 90%;
+  }
 `;
 
 export const HotelContainerHeader = styled.div`
   display: flex;
+  flex-direction: column;
   padding-top: 4rem;
+  gap: 40px;
   align-items: center;
   width: 100%;
+
+  @media (max-width: 1250px) {
+    gap: 28px;
+  }
+
+  @media (max-width: 1000px) {
+    padding-top: 40px;
+  }
+`;
+
+export const HotelSubcontainerHeader = styled.div`
+  display: flex;
+  align-items: flex-start;
+  flex-direction: ${(props) => props.flexDirection};
+  gap: ${(props) => props.gap};
+  width: 100%;
+`;
+
+export const HotelSubcontainerHeaderBox = styled.div`
+  min-width: 20%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+
+  @media (max-width: 1000px) {
+    min-width: 24%;
+  }
+
+  @media (max-width: 700px) {
+    min-width: 120px;
+  }
+`;
+
+export const HotelDescriptionTitle = styled.span``;
+
+export const HotelDescriptionSubtitle = styled.h1`
+  margin: 0;
+  color: #0a846b;
+  font-size: 22px;
+  white-space: nowrap;
+
+  @media (max-width: 1000px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 700px) {
+    font-size: 16px;
+  }
+`;
+
+export const HotelDescriptionDetail = styled.span`
+  font-size: 14px;
+  line-height: 3;
+
+  @media (max-width: 1250px) {
+    line-height: 2;
+  }
+
+  @media (max-width: 1000px) {
+    font-size: 12px;
+  }
+
+  @media (max-width: 600px) {
+    line-height: 1.6;
+  }
 `;
 
 export const Icon = styled.img`
@@ -36,6 +107,10 @@ export const IconBox = styled.div`
   border: 2px solid #0a846b;
   border-radius: 50%;
   cursor: pointer;
+
+  @media (max-width: 600px) {
+    padding: 6px;
+  }
 `;
 
 export const TitleContainer = styled.div`
@@ -64,6 +139,10 @@ export const HotelMainSection = styled.div`
   margin-top: 4rem;
   padding-bottom: 26px;
   box-shadow: 0px 0px 50px 0px #0000000d;
+
+  @media (max-width: 1250px) {
+    margin-top: 2rem;
+  }
 `;
 
 export const HotelMainSectionHeader = styled.div`
@@ -72,6 +151,10 @@ export const HotelMainSectionHeader = styled.div`
   justify-content: space-between;
   padding: 0 40px;
   border-bottom: 2px solid #e1e1e1;
+
+  @media (max-width: 600px) {
+    padding: 0 20px;
+  }
 `;
 
 export const SectionTitleContainer = styled.div`
@@ -79,6 +162,14 @@ export const SectionTitleContainer = styled.div`
   flex-direction: column;
   gap: 3px;
   padding: 32px 0px;
+
+  @media (max-width: 1000px) {
+    padding: 24px 0px;
+  }
+
+  @media (max-width: 600px) {
+    padding: 24px 0px;
+  }
 `;
 
 export const ButtonsContainer = styled.div`
@@ -90,6 +181,14 @@ export const SectionTitle = styled.h1`
   font-size: 28px;
   font-weight: 600;
   margin: 0;
+
+  @media (max-width: 1000px) {
+    font-size: 22px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 18px;
+  }
 `;
 
 export const SectionSubtitle = styled.div`
@@ -104,12 +203,27 @@ export const HotelBodyContainer = styled.div`
   justify-content: space-between;
   margin-top: 20px;
   padding: 32px 40px;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    margin-top: 10px;
+    padding: 22px 40px;
+  }
+
+  @media (max-width: 600px) {
+    margin-top: 10px;
+    padding: 12px 20px;
+  }
 `;
 
 export const HotelLeftContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 66%;
+
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
 `;
 
 export const RatingsRow = styled.div`
@@ -144,6 +258,11 @@ export const HotelRightContainer = styled.div`
   width: 26%;
   height: min-content;
   box-shadow: 0px 0px 20px 0px #0000000d;
+
+  @media (max-width: 1000px) {
+    width: 90%;
+    margin: 20px auto 0px auto;
+  }
 `;
 
 export const ChecksRow = styled.div`
@@ -246,6 +365,15 @@ export const GoogleMapsSection = styled.div`
 
 export const GoogleMapTitle = styled.h1`
   margin: 0;
+  font-size: 24px;
+
+  @media (max-width: 1000px) {
+    font-size: 22px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 20px;
+  }
 `;
 
 export const GoogleMapAddress = styled.span`
@@ -253,6 +381,14 @@ export const GoogleMapAddress = styled.span`
   gap: 10px;
   margin-top: 10px;
   align-items: center;
+
+  @media (max-width: 1000px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 12px;
+  }
 `;
 
 export const ProductsSection = styled.div`
@@ -262,18 +398,47 @@ export const ProductsSection = styled.div`
 
 export const SectionHeaderContainer = styled.div`
   display: flex;
+  justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 450px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+  } ;
 `;
 
 export const HeaderTitleContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
+  /* width: 70%; */
+`;
+
+export const ButtonRow = styled.div`
+  display: flex;
+  justify-content: flex-end;
+
+  /* @media (max-width: 1100px) {
+    width: 20%;
+  }
+
+  @media (max-width: 900px) {
+    width: 28%;
+  }
+
+  @media (max-width: 650px) {
+    width: 40%;
+  } */
 `;
 
 export const ProductsTitle = styled.span`
   font-weight: 500;
+
+  @media (max-width: 1000px) {
+    font-size: 14px;
+  }
 `;
 
 export const ProductsSubtitle = styled.h1`
@@ -281,6 +446,14 @@ export const ProductsSubtitle = styled.h1`
   font-weight: 700;
   font-size: 24px;
   color: #0a846b;
+
+  @media (max-width: 1000px) {
+    font-size: 22px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 20px;
+  }
 `;
 
 export const SectionSubtitleContainer = styled.div`
@@ -291,9 +464,27 @@ export const SectionSubtitleContainer = styled.div`
 
 export const CardsContainer = styled.div`
   margin-top: 30px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 1fr); /* Ajuste conforme necessário */
+  gap: 10px; /* Espaçamento entre os itens */
+
+  & > * {
+    margin: 0 auto;
+  }
+
+  @media (max-width: 1500px) {
+    grid-template-columns: repeat(3, 1fr); /* Ajuste conforme necessário */
+  }
+
+  @media (max-width: 870px) {
+    grid-template-columns: repeat(2, 1fr); /* Ajuste conforme necessário */
+  }
+
+  @media (max-width: 610px) {
+    grid-template-columns: repeat(1, 1fr); /* Ajuste conforme necessário */
+  }
+
   width: 100%;
   row-gap: 30px;
 `;

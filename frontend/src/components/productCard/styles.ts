@@ -11,7 +11,7 @@ export const StyledProductCard = styled.div`
   gap: 4px;
   box-shadow: 0px 4px 28px -2px #00000014;
   cursor: pointer;
-  flex: 1;
+  width: 250px;
 `;
 
 export const CardImage = styled.img`
