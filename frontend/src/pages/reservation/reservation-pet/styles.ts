@@ -10,12 +10,12 @@ export const StyledPetRegister = styled.div`
     rgba(199, 222, 217, 0) 87.34%
   );
   margin: auto;
-  padding-bottom: 10rem;
 `;
 
 export const PetRegisterContainer = styled.div`
   width: 80%;
   margin: auto;
+  margin-bottom: 2rem;
 
   @media (max-width: 600px) {
     width: 100%;
@@ -58,8 +58,13 @@ export const PetRegisterSectionHeader = styled.div`
   padding: 0 40px;
   border-bottom: 2px solid #e1e1e1;
 
-  @media (max-width: 600px) {
+  @media (max-width: 1000px) {
+    flex-direction: column;
     padding: 0px;
+  }
+
+  @media (max-width: 1000px) {
+    padding: 10px 0px;
   }
 `;
 
@@ -67,10 +72,6 @@ export const SectionTitleAndAvatarContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
-
-  @media (max-width: 1000px) {
-    display: none;
-  }
 `;
 
 export const SectionTitleContainer = styled.div`
@@ -78,12 +79,20 @@ export const SectionTitleContainer = styled.div`
   flex-direction: column;
   gap: 3px;
   padding: 32px 0px;
+
+  @media (max-width: 1000px) {
+    padding: 10px 0px;
+  }
 `;
 
 export const SectionTitle = styled.h1`
   font-size: 24px;
   font-weight: 600;
   margin: 0;
+
+  @media (max-width: 1000px) {
+    font-size: 18px;
+  }
 `;
 
 export const SectionSubtitle = styled.div`
@@ -99,17 +108,13 @@ export const ImageContainer = styled.div`
 
   @media (max-width: 1000px) {
     width: 100%;
-    padding: 20px;
-  }
-
-  @media (max-width: 760px) {
-    margin-top: 1rem;
+    padding: 10px 0px;
   }
 `;
 
 export const Image = styled.img`
   @media (max-width: 760px) {
-    width: 100%;
+    width: 80%;
   }
 `;
 
@@ -229,9 +234,6 @@ export const LeftTitle = styled.h1`
 export const LeftSubtitle = styled.span`
   margin: 0;
   font-size: 14px;
-
-  @media (max-width: 1000px) {
-  }
 `;
 
 export const LeftRow = styled.div`
@@ -281,13 +283,6 @@ export const ButtonRow = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 0 40px;
-
-  @media (max-width: 1000px) {
-    & > :first-child {
-      width: 130px;
-      padding: 6px 10px;
-    }
-  }
 `;
 
 export const PetRegisterRightContainer = styled.div`

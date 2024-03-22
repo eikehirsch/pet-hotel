@@ -8,6 +8,8 @@ import {
   SectionTitleContainer,
   SectionTitle,
   SectionSubtitle,
+  ImageContainer,
+  Image,
   Vacancy,
   BodyContainer,
   LeftContainer,
@@ -28,6 +30,7 @@ import {
 
 import Navbar from "../../../components/navbar/Navbar.jsx";
 import Button from "../../../components/button/Button.jsx";
+import Footer from "../../../components/footer/Footer.jsx";
 
 import hotel from "../../../mocks/hotel.js";
 
@@ -50,6 +53,9 @@ const ReservationPayment = () => {
                 </SectionSubtitle>
               </SectionTitleContainer>
             </SectionTitleAndAvatarContainer>
+            <ImageContainer>
+              <Image src="./images/reservation-payment-step.svg" alt="" />
+            </ImageContainer>
           </ReservationPaymentSectionHeader>
 
           <BodyContainer>
@@ -70,7 +76,7 @@ const ReservationPayment = () => {
                       />
                     </InputSubcontainer>
                   </InputContainer>
-                  <InputContainer width="10%">
+                  <InputContainer width="20%">
                     <InputSubcontainer>
                       <Icon width="24px" src="./images/logo-pix.svg" alt="" />
                       <Input
@@ -81,7 +87,7 @@ const ReservationPayment = () => {
                       />
                     </InputSubcontainer>
                   </InputContainer>
-                  <InputContainer width="38%">
+                  <InputContainer flex="1">
                     <Input type="text" placeholder="Transferência Bancária" />
                   </InputContainer>
                 </LeftRow>
@@ -103,39 +109,22 @@ const ReservationPayment = () => {
                       <Icon width="110px" src="./images/banks.svg" alt="" />
                     </InputSubcontainer>
                   </InputContainer>
-                  <InputContainer width="20%">
+                  <InputContainer flex="1">
                     <Label>CVC</Label>
                     <Input type="text" placeholder="123" />
                   </InputContainer>
                 </LeftRow>
                 <LeftRow>
-                  <InputContainer width="33%">
+                  <InputContainer flex="1">
                     <Label>Validade</Label>
                     <Input type="text" placeholder="01/2000" />
                   </InputContainer>
-                  <InputContainer width="33%">
-                    <Label>CPF</Label>
+                  <InputContainer flex="1">
+                    <Label>CPF do titular</Label>
                     <Input type="text" placeholder="012.154.015-02" />
-                  </InputContainer>
-                  <InputContainer width="33%">
-                    <Label>CEP</Label>
-                    <Input type="text" placeholder="00000-000" />
                   </InputContainer>
                 </LeftRow>
               </LeftMainInfos>
-
-              <ButtonRow>
-                <Button
-                  color="#ffffff"
-                  backgroundColor="#0a846b"
-                  border="2px solid #0a846b"
-                  borderRadius="6px"
-                  fontWeight="500"
-                  width="10%"
-                >
-                  Próximo
-                </Button>
-              </ButtonRow>
             </LeftContainer>
 
             <RightContainer>
@@ -153,8 +142,32 @@ const ReservationPayment = () => {
               </TotalRow>
             </RightContainer>
           </BodyContainer>
+          <ButtonRow>
+            <Button
+              color="#0a846b"
+              backgroundColor="#ffffff"
+              border="2px solid #0a846b"
+              borderRadius="6px"
+              fontWeight="600"
+              width="10%"
+            >
+              Anterior
+            </Button>
+
+            <Button
+              color="#ffffff"
+              backgroundColor="#0a846b"
+              border="2px solid #0a846b"
+              borderRadius="6px"
+              fontWeight="500"
+              width="10%"
+            >
+              Próximo
+            </Button>
+          </ButtonRow>
         </ReservationPaymentSection>
       </ReservationPaymentContainer>
+      <Footer />
     </StyledReservationPayment>
   );
 };

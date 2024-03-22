@@ -10,12 +10,16 @@ export const StyledReservationRevision = styled.div`
     rgba(199, 222, 217, 0) 87.34%
   );
   margin: auto;
-  padding-bottom: 10rem;
 `;
 
 export const ReservationRevisionContainer = styled.div`
   width: 80%;
   margin: auto;
+  margin-bottom: 2rem;
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 export const Icon = styled.img`
@@ -37,6 +41,14 @@ export const ReservationRevisionSection = styled.div`
   margin-top: 4rem;
   padding-bottom: 26px;
   box-shadow: 0px 0px 50px 0px #0000000d;
+
+  @media (max-width: 1000px) {
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 600px) {
+    margin-top: 1rem;
+  }
 `;
 
 export const ReservationRevisionSectionHeader = styled.div`
@@ -45,6 +57,15 @@ export const ReservationRevisionSectionHeader = styled.div`
   justify-content: space-between;
   padding: 0 40px;
   border-bottom: 2px solid #e1e1e1;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    padding: 0px;
+  }
+
+  @media (max-width: 1000px) {
+    padding: 10px 0px;
+  }
 `;
 
 export const SectionTitleAndAvatarContainer = styled.div`
@@ -58,12 +79,20 @@ export const SectionTitleContainer = styled.div`
   flex-direction: column;
   gap: 3px;
   padding: 32px 0px;
+
+  @media (max-width: 1000px) {
+    padding: 10px 0px;
+  }
 `;
 
 export const SectionTitle = styled.h1`
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 600;
   margin: 0;
+
+  @media (max-width: 1000px) {
+    font-size: 18px;
+  }
 `;
 
 export const SectionSubtitle = styled.div`
@@ -73,17 +102,48 @@ export const SectionSubtitle = styled.div`
   font-size: 14px;
 `;
 
+export const ImageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 1000px) {
+    width: 100%;
+    padding: 10px 0px;
+  }
+`;
+
+export const Image = styled.img`
+  @media (max-width: 760px) {
+    width: 80%;
+  }
+`;
+
 export const BodyContainer = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
   padding: 32px 40px;
+
+  @media (max-width: 1400px) {
+    gap: 50px;
+  }
+
+  @media (max-width: 1100px) {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 0px;
+    padding: 20px 16px;
+  }
 `;
 
 export const LeftContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 62%;
+
+  @media (max-width: 1100px) {
+    width: 100%;
+  }
 `;
 
 export const LeftTitleRow = styled.div`
@@ -92,10 +152,14 @@ export const LeftTitleRow = styled.div`
 
 export const LeftTitle = styled.h1`
   margin: 0;
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 600;
   font-size: ${(props) => props.fontSize};
   font-weight: ${(props) => props.fontWeight};
+
+  @media (max-width: 600px) {
+    font-size: 22px;
+  }
 `;
 
 export const Subsection = styled.div`
@@ -105,6 +169,10 @@ export const Subsection = styled.div`
   padding: 32px 0;
   border-bottom: ${(props) =>
     props.borderBottom ? props.borderBottom : "1px solid #dedddd"};
+
+  @media (max-width: 1000px) {
+    padding: 14px 0;
+  }
 `;
 
 export const SubsectionTitle = styled.h3`
@@ -122,6 +190,10 @@ export const SubsectionRow = styled.div`
   gap: 40px;
   font-size: 14px;
   margin-bottom: 10px;
+
+  @media (max-width: 1000px) {
+    gap: 20px;
+  }
 `;
 
 export const SubsectionRowTitle = styled.h5`
@@ -129,9 +201,17 @@ export const SubsectionRowTitle = styled.h5`
   font-weight: bold;
   font-size: 16px;
   min-width: 140px;
+
+  @media (max-width: 600px) {
+    font-size: 14px;
+  }
 `;
 
-export const SubsectionRowDetail = styled.span``;
+export const SubsectionRowDetail = styled.span`
+  @media (max-width: 600px) {
+    font-size: 12px;
+  }
+`;
 
 export const RightContainer = styled.div`
   display: flex;
@@ -146,6 +226,17 @@ export const RightContainer = styled.div`
   width: 30%;
   height: min-content;
   box-shadow: 0px 0px 20px 0px #0000000d;
+
+  @media (max-width: 1100px) {
+    width: fit-content;
+    margin: 0 auto;
+    width: 44%;
+    padding: 10px;
+  }
+
+  @media (max-width: 850px) {
+    width: 70%;
+  }
 `;
 
 export const RightContainerRow = styled.div`
@@ -179,4 +270,8 @@ export const TotalRow = styled.div`
 export const TotalDetail = styled.span`
   font-weight: 700;
   font-size: 26px;
+
+  @media (max-width: 600px) {
+    font-size: 20px;
+  }
 `;

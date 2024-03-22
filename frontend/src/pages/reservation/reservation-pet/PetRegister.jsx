@@ -33,6 +33,7 @@ import {
 import DateRangePicker from "../../../components/DatePicker/DatePicker.jsx";
 import Navbar from "../../../components/navbar/Navbar.jsx";
 import Button from "../../../components/button/Button.jsx";
+import Footer from "../../../components/footer/Footer.jsx";
 
 import hotel from "../../../mocks/hotel.js";
 
@@ -78,13 +79,13 @@ const PetRegister = () => {
                   </InputContainer>
                 </LeftRow>
                 <LeftRow>
-                  <InputContainer width="20%">
+                  <InputContainer width="100px">
                     <Label>Idade</Label>
                     <Input type="text" placeholder="Idade" />
                   </InputContainer>
-                  <InputContainer width="20%">
-                    <Label>Tamanho</Label>
-                    <Input type="text" placeholder="Tamanho" />
+                  <InputContainer width="100px">
+                    <Label>Gênero</Label>
+                    <Input type="text" placeholder="Gênero" />
                   </InputContainer>
                 </LeftRow>
               </PetMainInfos>
@@ -140,9 +141,9 @@ const PetRegister = () => {
               border="2px solid #0a846b"
               borderRadius="6px"
               fontWeight="600"
-              width="15%"
+              width="10%"
             >
-              + Adicionar Pet
+              Anterior
             </Button>
 
             <Button
@@ -158,6 +159,7 @@ const PetRegister = () => {
           </ButtonRow>
         </PetRegisterSection>
       </PetRegisterContainer>
+      <Footer />
     </StyledPetRegister>
   );
 };

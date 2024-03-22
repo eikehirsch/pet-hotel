@@ -27,6 +27,7 @@ import DateRangePicker from "../../../components/DatePicker/DatePicker.jsx";
 
 import Navbar from "../../../components/navbar/Navbar.jsx";
 import Button from "../../../components/button/Button.jsx";
+import Footer from "../../../components/footer/Footer.jsx";
 
 import hotel from "../../../mocks/hotel.js";
 
@@ -130,6 +131,7 @@ const PetOwner = () => {
           </ButtonRow>
         </MainSection>
       </PetOwnerContainer>
+      <Footer />
     </StylePetOwner>
   );
 };

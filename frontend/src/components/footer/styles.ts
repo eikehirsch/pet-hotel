@@ -33,4 +33,8 @@ export const FooterRow = styled.div`
   font-weight: 300;
   font-weight: ${(props) => props.fontWeight};
   padding-top: ${(props) => props.paddingPop};
+
+  @media (max-width: 600px) {
+    font-size: 12px;
+  }
 `;

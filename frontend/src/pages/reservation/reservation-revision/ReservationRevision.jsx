@@ -27,6 +27,7 @@ import {
 } from "./styles.ts";
 
 import Navbar from "../../../components/navbar/Navbar.jsx";
+import Footer from "../../../components/footer/Footer.jsx";
 
 import hotel from "../../../mocks/hotel.js";
 
@@ -166,6 +167,7 @@ const ReservationRevision = () => {
           </BodyContainer>
         </ReservationRevisionSection>
       </ReservationRevisionContainer>
+      <Footer />
     </StyledReservationRevision>
   );
 };
