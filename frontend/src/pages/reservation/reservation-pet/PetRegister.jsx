@@ -7,7 +7,10 @@ import {
   Icon,
   SectionTitleContainer,
   SectionTitle,
+  LeftSubtitle,
   SectionSubtitle,
+  ImageContainer,
+  Image,
   PetRegisterBodyContainer,
   PetRegisterLeftContainer,
   PetMainInfos,
@@ -52,7 +55,9 @@ const PetRegister = () => {
                 </SectionSubtitle>
               </SectionTitleContainer>
             </SectionTitleAndAvatarContainer>
-            <img src="./images/pet-register-step.svg" alt="" />
+            <ImageContainer>
+              <Image src="./images/pet-register-step.svg" alt="" />
+            </ImageContainer>
           </PetRegisterSectionHeader>
 
           <PetRegisterBodyContainer>
@@ -67,17 +72,17 @@ const PetRegister = () => {
                     <Label>Nome</Label>
                     <Input type="text" placeholder="Nome do pet" />
                   </InputContainer>
-                  <InputContainer width="30%">
-                    <Label>Tipo</Label>
-                    <Input type="text" placeholder="Tipo do pet" />
+                  <InputContainer flex="1">
+                    <Label>Porte</Label>
+                    <Input type="text" placeholder="Porte do pet" />
                   </InputContainer>
                 </LeftRow>
                 <LeftRow>
-                  <InputContainer width="40%">
+                  <InputContainer width="20%">
                     <Label>Idade</Label>
                     <Input type="text" placeholder="Idade" />
                   </InputContainer>
-                  <InputContainer width="50%">
+                  <InputContainer width="20%">
                     <Label>Tamanho</Label>
                     <Input type="text" placeholder="Tamanho" />
                   </InputContainer>
@@ -86,7 +91,7 @@ const PetRegister = () => {
 
               <AditionalServices>
                 <LeftTitleRow>
-                  <LeftTitle fontSize="18px">Serviços adicionais</LeftTitle>
+                  <LeftTitle>Serviços adicionais</LeftTitle>
                 </LeftTitleRow>
                 <AdicionalServicesRow>
                   <AditionalService>
@@ -110,48 +115,47 @@ const PetRegister = () => {
 
               <Remarks>
                 <LeftTitleRow>
-                  <LeftTitle fontSize="18px">Observações</LeftTitle>
+                  <LeftTitle>Observações</LeftTitle>
                 </LeftTitleRow>
                 <LeftRow>
-                  <LeftTitle fontSize="14px" fontWeight="400">
+                  <LeftSubtitle>
                     Escreva observações que você possa achar necessário que
                     nossos profissionais saibam sobre o seu pet
-                  </LeftTitle>
+                  </LeftSubtitle>
                 </LeftRow>
                 <LeftRow>
                   <RemarkInput rows="4" placeholder="Observações" />
                 </LeftRow>
               </Remarks>
-
-              <ButtonRow>
-                <Button
-                  color="#0a846b"
-                  backgroundColor="#ffffff"
-                  border="2px solid #0a846b"
-                  borderRadius="6px"
-                  fontWeight="600"
-                  width="15%"
-                >
-                  + Adicionar Pet
-                </Button>
-
-                <Button
-                  color="#ffffff"
-                  backgroundColor="#0a846b"
-                  border="2px solid #0a846b"
-                  borderRadius="6px"
-                  fontWeight="500"
-                  width="10%"
-                >
-                  Próximo
-                </Button>
-              </ButtonRow>
             </PetRegisterLeftContainer>
 
             <PetRegisterRightContainer>
               <DateRangePicker />
             </PetRegisterRightContainer>
           </PetRegisterBodyContainer>
+          <ButtonRow>
+            <Button
+              color="#0a846b"
+              backgroundColor="#ffffff"
+              border="2px solid #0a846b"
+              borderRadius="6px"
+              fontWeight="600"
+              width="15%"
+            >
+              + Adicionar Pet
+            </Button>
+
+            <Button
+              color="#ffffff"
+              backgroundColor="#0a846b"
+              border="2px solid #0a846b"
+              borderRadius="6px"
+              fontWeight="500"
+              width="10%"
+            >
+              Próximo
+            </Button>
+          </ButtonRow>
         </PetRegisterSection>
       </PetRegisterContainer>
     </StyledPetRegister>

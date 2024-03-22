@@ -16,6 +16,10 @@ export const StyledPetRegister = styled.div`
 export const PetRegisterContainer = styled.div`
   width: 80%;
   margin: auto;
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 export const Icon = styled.img`
@@ -37,6 +41,14 @@ export const PetRegisterSection = styled.div`
   margin-top: 4rem;
   padding-bottom: 26px;
   box-shadow: 0px 0px 50px 0px #0000000d;
+
+  @media (max-width: 1000px) {
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 600px) {
+    margin-top: 1rem;
+  }
 `;
 
 export const PetRegisterSectionHeader = styled.div`
@@ -45,12 +57,20 @@ export const PetRegisterSectionHeader = styled.div`
   justify-content: space-between;
   padding: 0 40px;
   border-bottom: 2px solid #e1e1e1;
+
+  @media (max-width: 600px) {
+    padding: 0px;
+  }
 `;
 
 export const SectionTitleAndAvatarContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
+
+  @media (max-width: 1000px) {
+    display: none;
+  }
 `;
 
 export const SectionTitleContainer = styled.div`
@@ -61,7 +81,7 @@ export const SectionTitleContainer = styled.div`
 `;
 
 export const SectionTitle = styled.h1`
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 600;
   margin: 0;
 `;
@@ -73,24 +93,56 @@ export const SectionSubtitle = styled.div`
   font-size: 14px;
 `;
 
+export const ImageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 1000px) {
+    width: 100%;
+    padding: 20px;
+  }
+
+  @media (max-width: 760px) {
+    margin-top: 1rem;
+  }
+`;
+
+export const Image = styled.img`
+  @media (max-width: 760px) {
+    width: 100%;
+  }
+`;
+
 export const PetRegisterBodyContainer = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
   padding: 32px 40px;
+  gap: 100px;
+
+  @media (max-width: 1400px) {
+    gap: 50px;
+  }
+
+  @media (max-width: 1100px) {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 0px;
+    padding: 20px 30px;
+  }
 `;
 
 export const PetRegisterLeftContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 66%;
+  flex: 1;
   gap: 10px;
 `;
 
 export const PetMainInfos = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 10px;
   margin-bottom: 20px;
 `;
 
@@ -120,6 +172,19 @@ export const AditionalService = styled.div`
   color: #b3b3b3;
   width: 80px;
   cursor: pointer;
+
+  @media (max-width: 1000px) {
+    padding: 8px 4px;
+    width: 70px;
+
+    & > :first-child {
+      width: 20px;
+    }
+
+    & > :nth-child(2) {
+      font-size: 12px;
+    }
+  }
 `;
 
 export const Remarks = styled.div`
@@ -146,19 +211,36 @@ export const RemarkInput = styled.textarea`
 `;
 
 export const LeftTitleRow = styled.div`
-  margin-bottom: 10px;
+  @media (max-width: 600px) {
+    margin-bottom: 0px;
+  }
 `;
 
 export const LeftTitle = styled.h1`
+  font-size: 21px;
   margin: 0;
   font-weight: 600;
-  font-size: ${(props) => props.fontSize};
-  font-weight: ${(props) => props.fontWeight};
+
+  @media (max-width: 1000px) {
+    font-size: 18px;
+  }
+`;
+
+export const LeftSubtitle = styled.span`
+  margin: 0;
+  font-size: 14px;
+
+  @media (max-width: 1000px) {
+  }
 `;
 
 export const LeftRow = styled.div`
   display: flex;
-  gap: 40px;
+  gap: 10px;
+
+  @media (max-width: 600px) {
+    gap: 10px;
+  }
 `;
 
 export const InputContainer = styled.div`
@@ -168,6 +250,7 @@ export const InputContainer = styled.div`
   align-items: ${(props) =>
     props.alignItems ? props.alignItems : "flex-start"};
   display: flex;
+  flex: ${(props) => props.flex};
   gap: 4px;
 `;
 
@@ -185,6 +268,9 @@ export const Input = styled.input`
   background-color: #ffffff;
   padding: 12px;
   border-radius: 4px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 
   &::placeholder {
     color: #bebdbd;
@@ -194,7 +280,14 @@ export const Input = styled.input`
 export const ButtonRow = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-top: 28px;
+  padding: 0 40px;
+
+  @media (max-width: 1000px) {
+    & > :first-child {
+      width: 130px;
+      padding: 6px 10px;
+    }
+  }
 `;
 
 export const PetRegisterRightContainer = styled.div`
@@ -203,11 +296,16 @@ export const PetRegisterRightContainer = styled.div`
   justify-content: flex-start;
   align-items: center;
   gap: 14px;
-  padding: 10px;
+  padding-bottom: 10px;
   border: 1px solid #e9e8e8;
   border-radius: 4px;
   background-color: white;
-  width: 30%;
   height: min-content;
   box-shadow: 0px 0px 20px 0px #0000000d;
+  margin-top: 70px;
+
+  @media (max-width: 1100px) {
+    width: fit-content;
+    margin: 0 auto;
+  }
 `;

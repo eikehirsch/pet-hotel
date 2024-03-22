@@ -50,7 +50,6 @@ const ReservationPayment = () => {
                 </SectionSubtitle>
               </SectionTitleContainer>
             </SectionTitleAndAvatarContainer>
-            <img src="./images/reservation-payment-step.svg" alt="" />
           </ReservationPaymentSectionHeader>
 
           <BodyContainer>
