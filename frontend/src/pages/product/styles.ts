@@ -80,7 +80,8 @@ export const SliderImage = styled.div`
 `;
 
 export const MainImage = styled.img`
-  width: 100%;
+  width: 500px;
+  border-radius: 14px;
   object-fit: contain;
 
   @media (max-width: 1450px) {

@@ -25,6 +25,7 @@ export const GuestsBox = styled.div`
 
 export const GuestsTitle = styled.h1`
   font-size: 18px;
+  margin-left: 20px;
 `;
 
 export const GuestCardsContainer = styled.div`
@@ -40,10 +41,10 @@ export const GuestCard = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 210px;
-  padding: 16px;
+  width: 190px;
+  padding: 14px 16px;
   border-radius: 10px;
-  gap: 4px;
+  gap: 6px;
 `;
 
 export const GuestAvatar = styled.img`
@@ -87,11 +88,20 @@ export const GuestPayStatus = styled.span`
   font-weight: bold;
 `;
 
+export const GuestPayLocation = styled.span`
+  font-weight: bold;
+  padding: 2px 6px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 2px solid black;
+  margin-top: 10px;
+`;
+
 export const DateCalendarBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 50px;
+  padding-top: 36px;
 `;
 
 export const SecondRow = styled.div`

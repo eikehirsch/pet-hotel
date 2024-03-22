@@ -11,6 +11,7 @@ import {
   GuestDate,
   GuestPrice,
   GuestPayStatus,
+  GuestPayLocation,
   DateCalendarBox,
   SecondRow,
   OccupantsBox,
@@ -51,6 +52,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
+import "./styles.css";
+
 // import required modules
 import { Pagination, Navigation } from "swiper/modules";
 
@@ -62,12 +65,13 @@ const HotelDashboardPanel = () => {
           <GuestsTitle>Hóspedes a chegar</GuestsTitle>
           <GuestCardsContainer>
             <Swiper
-              spaceBetween={10}
+              height={"100%"}
               slidesPerView={2}
               navigation={true}
               modules={[Pagination, Navigation]}
               onSlideChange={() => console.log("slide change")}
               onSwiper={(swiper) => console.log(swiper)}
+              id="mySwiper4"
             >
               {guests.map((guest) => (
                 <SwiperSlide key={guest.name}>
@@ -80,6 +84,7 @@ const HotelDashboardPanel = () => {
                     <GuestDate status={guest.status}>{guest.date}</GuestDate>
                     <GuestPrice>{`R$ ${guest.price}`}</GuestPrice>
                     <GuestPayStatus>{guest.status}</GuestPayStatus>
+                    <GuestPayLocation>Cliente no clocal</GuestPayLocation>
                   </GuestCard>
                 </SwiperSlide>
               ))}

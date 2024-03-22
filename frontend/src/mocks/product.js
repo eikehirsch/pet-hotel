@@ -6,7 +6,7 @@ const product = {
   description:
     "Uma coleira de cachorro é um acessório projetado para ser colocado ao redor do pescoço do cachorro. Geralmente é feita de materiais duráveis como nylon, couro ou tecido resistente. A coleira inclui uma fivela ou fecho para ajustar o tamanho e garantir um ajuste confortável, além de um anel de metal para prender a guia.",
   images: [
-    "./images/first-product4.png",
+    "./images/coleira-dog.jpg",
     "./images/first-product4.png",
     "./images/first-product3.png",
     "./images/first-product4.png",
